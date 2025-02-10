@@ -9,6 +9,7 @@
 (self_closing_tag) @tag
 (cf_selfclose_tag) @tag
 (cf_output_tag) @tag
+(cf_tag) @tag
 
 ; Variables
 ;----------
@@ -26,10 +27,10 @@
 (function_expression
   name: (identifier) @function) @definition.function
 
-(cf_function 
+(cf_function
 	(cf_attribute
     	(cf_attribute_name) @attribute (#eq? @attribute "name")
-        (quoted_cf_attribute_value 
+        (quoted_cf_attribute_value
         	(attribute_value) @function
         )
 	)
@@ -107,10 +108,10 @@
 
 ; Literals
 ;---------
-[
-  (this)
-  (super)
-] @variable.builtin
+; [
+;   (this)
+;   (super)
+; ] @variable.builtin
 
 ((identifier) @variable.builtin
   (#eq? @variable.builtin "self"))

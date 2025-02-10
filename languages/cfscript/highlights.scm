@@ -48,8 +48,8 @@
 ; Literals
 ;---------
 
-(this) @variable.builtin
-(super) @variable.builtin
+; (this) @variable.builtin
+; (super) @variable.builtin
 
 [
   (true)
