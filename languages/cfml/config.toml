@@ -1,7 +1,7 @@
 name = "CFML (Component, Tag-Based)"
 grammar = "cfml"
 path_suffixes = []
-first_line_pattern = "^\\s*<"
+first_line_pattern = "^\\s*(<cfcomponent|<cfinterface|<!---)"
 autoclose_before = ";:.,=}])>"
 block_comment = ["<!--- ", " --->"]
 brackets = [
